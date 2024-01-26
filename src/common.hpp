@@ -14,6 +14,10 @@ extern "C"
 
 #define ERROR_STR_LEN 512
 
+ #ifndef AssertArg
+ #define AssertArg U32
+ #endif
+
 #if PG_VERSION_NUM < 110000
 #define DatumGetJsonbP DatumGetJsonb
 #define JsonbPGetDatum JsonbGetDatum
